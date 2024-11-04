@@ -12,9 +12,9 @@ typedef struct{
     float y; //coordenada y de P e Q
 }pontos;
 
-pontos distancia(pontos num1, pontos num2){
-    pontos resultado;
-    resultado = sqrt(pow(num1.x - num2.x, 2) * pow(num1.y - num2.y, 2) );
+float distancia(pontos num1, pontos num2){
+    float resultado;
+    resultado = sqrt(pow(num1.x - num2.x, 2) * pow(num1.y - num2.y, 2)) ;
     return resultado;
 }
 
@@ -26,14 +26,14 @@ int main(){
    for(int i=0; i<2; i++){
    printf("\n Digite a coordenada x do Ponto %c: ",l[i]);
    scanf("%f", &p[i].x);
-   printf("\n Digite a coordenada y do Ponto %c: ", l[i]);
+   printf(" Digite a coordenada y do Ponto %c: ", l[i]);
    scanf("%f", &p[i].y);
    }
    
    //chamando funcao distancia
-   pontos resultado= distancia(p[0], p[1]);
+   float resultado = distancia(p[0], p[1]);
    
-   printf("A Distancia dos pontos P e Q e: %.2f", resultado);
+   printf("\n A Distancia dos pontos P e Q e: %.2f", resultado);
     
     return 0;
 }
