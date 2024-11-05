@@ -14,7 +14,7 @@ typedef struct{
 
 float distancia(pontos num1, pontos num2){
     float resultado;
-    resultado = sqrt(pow(num1.x - num2.x, 2) * pow(num1.y - num2.y, 2)) ;
+    resultado = sqrt(pow(num1.x - num2.x, 2) + pow(num1.y - num2.y, 2)) ;
     return resultado;
 }
 
