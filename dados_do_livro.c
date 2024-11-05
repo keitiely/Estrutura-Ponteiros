@@ -3,6 +3,7 @@ capaz de armazenar o título, o autor, a editora e o ano de publicação de um l
 atribuir valores aos seus campos e exibi-la no vídeo.*/
 
 #include <stdio.h>
+#include <string.h>
 struct{
     char titulo[50];
     char autor[50];
@@ -11,16 +12,12 @@ struct{
 }anonimo;
 
 int main(){
-    //leitura dos dados do livro
-    printf("Digite os dados do livro\n\nTitulo: ");
-    fgets(anonimo.titulo, sizeof(anonimo.titulo), stdin);
-    printf("Autor: ");
-    fgets(anonimo.autor, sizeof(anonimo.autor), stdin);
-    printf("Editora: ");
-    fgets(anonimo.editora, sizeof(anonimo.editora), stdin);
-    printf("Ano de Publicacao: ");
-    scanf("%d", &anonimo.ano);
     
+    strcpy(anonimo.titulo, "Anne of Green Gables");
+    strcpy(anonimo.autor, "Lucy Maud Montgomery");
+    strcpy(anonimo.editora, "L.C. Page & Company");
+    anonimo.ano = 1908;
+   
     //imprimindo dados do livro
     printf("\n\tDados do livro");
     printf("\n\t---------------------------");
