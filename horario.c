@@ -8,11 +8,11 @@ typedef struct{
     int hora;
     int minutos;
     int segundos;
-}horário;
+}horario;
 
 int main(){
     
-  horário hours = {17, 30, 46 };
+  horario hours = {17, 30, 46 };
   
   printf("\n\tHora definida: %d:%d:%d", hours.hora, hours.minutos, hours.segundos);
 
