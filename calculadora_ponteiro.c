@@ -35,7 +35,7 @@ float divi(int a, int b){
         printf("\n  3. Dividir ");
         printf("\n  4. Fechar ");
         printf("\n\n Digite a opcao: ");
-        scanf("\n %d", &i);
+        scanf("%d", &i);
     
         
         if(i>=0 && i<=3){
