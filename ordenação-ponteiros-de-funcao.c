@@ -4,6 +4,7 @@ ordenar um vetor de inteirosde diferentes maneiras
 */
 #include <stdio.h>
 #define ABS(n) ((n) < 0 ? -(n) : (n))
+
 void crescente(int *a, int *b){
     int c;
     if(*b < *a){
@@ -25,10 +26,11 @@ void decrescente(int *a, int *b){
 
 void absoluta(int *a, int *b){
     int c;
-   if (ABS(*a) > ABS(*b)) {  
+   if (ABS(*a) > ABS(*b)) { //compara o valor absoluto sem considerar o sinal 
         c = *a;
         *a = *b;
-        *b = c;
+        *b = c;//depois de comparar retorna em ordem crescente mantendo o sinal
+        //mantem o sinal pois nao chamei a funcao abs no corpo do if
    }
 
 };
