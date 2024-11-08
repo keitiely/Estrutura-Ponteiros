@@ -29,12 +29,14 @@ void minusculas(char *string){
 void inverter(char *string){
     int i=0;
     char *fim = string;
+    // Calcula o comprimento da string e move o ponteiro fim para o último caractere
     while(*fim){
-       fim++;
+       fim++; 
        i++;
     }
-    fim--;
+    fim--; // Ajusta o ponteiro fim para o último caractere (antes do terminador nulo)
     
+    // Inverte a string trocando o primeiro caractere com o último, o segundo com o penúltimo, etc.
     while(string < fim){
         char temp = *string;
         *string = *fim;
@@ -54,8 +56,9 @@ int main(){
     printf("Escolha qual converter: ");
     do{
         printf("\n 0. Maiuculas");
-        printf("\n 1. minusculas");
+        printf("\n 1. Minusculas");
         printf("\n 2. Inverter");
+        printf("\n 3. Sair");
         printf("\n Digite a opcao: ");
         scanf("%d", &i);
         
